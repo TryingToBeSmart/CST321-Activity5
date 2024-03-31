@@ -16,3 +16,23 @@ This activity is to practice using bash shell scripts to make decisions, perform
 ### Print names
 [printNames.sh](./printNames.sh) program uses a for loop to sort each element from a txt file and then iterate over each element and assign the currently selected item to the variable 'name' and then print that currently selected item.  Also, if the name is 'Mark', then print 'Found Mark'.
 ![Print names screenshot](./screenshots/printNames.png)
+
+### Research Northbridge and Southbridge
+1. What are these bridges and what functions do they perform?
+  - The northbridge is located toward the north of the motherboard and handles communication between the CPU and other parts of the motherboard.
+  - The southbridge is located south of the PCI and handles most I/O. It uses the northbridge to connect to the CPU.
+2. Why are there 2 bridges?
+  - The northbridge serves as the gateway to the CPU.  The southbridge needs it to communicate to the CPU while the northbridge needs the southbridge to perform I/O functions.
+3. What I/O devices are handled in each bridge?
+  - The northbridge performs quick actions between the CPU and other parts of the motherboard such as the graphics card.
+  - The southbridge performs slower actions like communication through USB and hard drive.
+4. Where do components like a DMA controller fit into the bridges?
+  - The northbridge can tell the southbridge to perform I/O functions asynchronously so that the CPU can continue processing its other processes without having to handle the copying or writing of files.
+5. How are devices like a keyboard, mouse, network, and hard disk handled?
+  - These are all functions that the southbridge can handle because they are relatively slow and don't require much interaction from the CPU until the device raises an interrupt when complete.  
+
+
+
+References:
+https://www.lenovo.com/us/en/glossary/northbridge/?orgRef=https%253A%252F%252Fwww.google.com%252F
+https://www.geeksforgeeks.org/difference-between-north-bridge-and-south-bridge/
